@@ -1,0 +1,6 @@
+deb http://ftp.debian.org/debian ${DEBRELEASE} main contrib non-free
+deb-src http://ftp.debian.org/debian ${DEBRELEASE} main contrib non-free
+deb http://ftp.debian.org/debian ${DEBRELEASE}-updates main contrib non-free
+deb-src http://ftp.debian.org/debian ${DEBRELEASE}-updates main contrib non-free
+deb http://security.debian.org ${DEBRELEASE}/updates main contrib non-free
+deb-src http://security.debian.org ${DEBRELEASE}/updates main contrib non-free

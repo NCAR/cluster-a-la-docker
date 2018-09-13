@@ -1,0 +1,20 @@
+service rrdsrv
+{
+         disable         = no
+         socket_type     = stream
+         protocol        = tcp
+         wait            = no
+         user            = www-data
+         group           = www-data
+         #env             = RRDCACHED_ADDRESS=unix:/tmp/rrdcached.limited.sock
+         server          = /usr/bin/rrdtool
+         server_args     = - /rrds
+         port            = 13900
+         id              = rrdsrv
+         #only_from       = 192.168.122.0/24
+         #only_from       += 127.0.0.1
+         #only_from       += 128.117.0.0/16
+         log_on_failure  += USERID
+         log_on_success  += PID HOST EXIT
+}
+
